@@ -1,0 +1,19 @@
+BIT_sync PHP Library
+
+This is a tidied-up version of a script I wrote which is run as a daily CRON job on the Sheelanagig website (sheelanagig.co.uk).  
+
+The band wanted to enter all tour date information via the service Bands In Town (bandsintown.com) to take advantage of its tracking and social networking facilities.  However, on Bands In Town all tour dates are deleted after they happen, leaving no way to search or display previous tour dates.  
+
+To retain this data, and to avoid the overhead of using the Bands In Town API every time the Sheelanagig website was accessed, I wrote a script that would be run every day to retrieve all upcoming tour dates from Bands In Town into a local MySQL database for easy search and display.
+
+Tour dates on the Bands In Town site are subject to change of details and cancellation.  I decided that the script would simply remove all future tour dates from the local database before inserting the records downloaded from Bands In Town to avoid having to compare every field of the old and new records to find changes.
+
+Note that this library uses the Bands In Town Open Concert API (V1), which is still available but has been superceded by V2.  V2 is only available to Enterprise Partners and is based around the Facebook platform. Details of the API are at: bandsintown.com/api/1.0/overview 
+
+All you need to use the V1 API is an application ID, which can be anything but should describe your application or company.
+
+I am sharing this library as an example of my OO PHP coding, but feel free to use or modify it in any projects.  All feedback and constructive criticism is welcome.
+
+Dorian Sutton
+July 2014
+
